@@ -8,18 +8,18 @@ const ToDoContainer = () => {
   const [idCounter, setIdCounter] = useState(0); //maintaining the id
 
   const addTodo = (todo) => {
-    const newTodo = { id: idCounter, task: todo };
+    const newTodo = { id: idCounter, task: todo, completed:false};
     setTodos([...todos, newTodo]);
     setIdCounter(idCounter + 1); // Increment the ID counter
-    //[{id: 0, task: 'task1'}, {id: 1, task: 'Task2'}]
+    // [{id: 0, task: 'task1'},
+    //  {id: 1, task: 'Task2'}
+    // ]
   };
 
-  // useEffect(() => {
-  //   console.log(todos); // Logging the current todos
-  // }, [todos]); // Log todos whenever it changes
-
+  useEffect(() => {
+    console.log(todos); // Logging the current todos
+  }, [todos]); // Log todos whenever it changes 
   const [todoPage, setTodoPage] = useState(0)
-  console.log(todoPage);
 
   return (
     <>
@@ -36,7 +36,7 @@ const ToDoContainer = () => {
           ) : (
             <div className="todosHolder">
               {todos.map((todo) => (
-                <ToDo key={todo.id} task={todo.task} /> // Render ToDo component for each todo
+                <ToDo key={todo.id} task={todo.task}/> // Render ToDo component for each todo
               ))}
             </div>
           )}

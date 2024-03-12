@@ -9,7 +9,9 @@ const ToDo = ({task}) => {
   return (
     <>
       <div className="todo">
-        <p>{task}</p>
+        <p 
+          className= {`"completed? 'completed' : ""`}
+        >{task}</p>
         <div className="editDel">
           <span className="material-icons">edit_square</span>
           <span className="material-icons">delete</span>
