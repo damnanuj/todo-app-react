@@ -151,6 +151,11 @@ body {
         align-items: center;
         padding: 10px;
         margin-bottom: 8px;
+        .task{
+          cursor: pointer;
+          width: 70%;
+         
+        }
 
         .editDel {
           display: flex;

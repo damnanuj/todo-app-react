@@ -8,7 +8,7 @@ const ToDoContainer = () => {
   const [idCounter, setIdCounter] = useState(0); //maintaining the id
 
   const addTodo = (todo) => {
-    const newTodo = { id: idCounter, task: todo, completed:false};
+    const newTodo = { id: idCounter, task: todo, isDone:false};
     setTodos([...todos, newTodo]);
     setIdCounter(idCounter + 1); // Increment the ID counter
     // [{id: 0, task: 'task1'},
@@ -20,6 +20,20 @@ const ToDoContainer = () => {
     console.log(todos); // Logging the current todos
   }, [todos]); // Log todos whenever it changes 
   const [todoPage, setTodoPage] = useState(0)
+
+  const deleteTask = (id) =>{
+    const newTask = todos.filter(item =>item.id != id)
+    setTodos(newTask)
+  }
+  const taskCompleted =(id)=>{
+    for(let i = 0; i<todos.length; i++){
+      if(todos[i].id ===id){
+        todos[i].isDone = !todos[i].isDone ;
+        break;
+      }
+    }
+    setTodos([...todos])
+  }
 
   return (
     <>
@@ -35,9 +49,7 @@ const ToDoContainer = () => {
             <p className="noItems">No items, please add something.</p>
           ) : (
             <div className="todosHolder">
-              {todos.map((todo) => (
-                <ToDo key={todo.id} task={todo.task}/> // Render ToDo component for each todo
-              ))}
+                <ToDo tasks={todos} deleteTask={deleteTask} taskCompleted={taskCompleted}/> 
             </div>
           )}
         </div>

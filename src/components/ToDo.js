@@ -1,22 +1,21 @@
+import React from 'react';
 
 
 
 
 
-import React from "react";
-
-const ToDo = ({task}) => {
+const ToDo = ({ tasks, deleteTask, taskCompleted }) => {
   return (
     <>
-      <div className="todo">
-        <p 
-          className= {`"completed? 'completed' : ""`}
-        >{task}</p>
-        <div className="editDel">
-          <span className="material-icons">edit_square</span>
-          <span className="material-icons">delete</span>
+      {tasks.map(taskObj => (
+        <div className="todo" key={taskObj.id}>
+          <p className={`task ${taskObj.isDone ? 'completed' : ''}`} onClick={()=> taskCompleted(taskObj.id)}>{taskObj.task}</p>
+          <div className="editDel">
+            <span className="material-icons">edit_square</span>
+            <span className="material-icons" onClick={() => deleteTask(taskObj.id)}>delete</span>
+          </div>
         </div>
-      </div>
+      ))}
     </>
   );
 };
