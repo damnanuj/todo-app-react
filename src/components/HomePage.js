@@ -4,7 +4,7 @@ import weiredGuy from "../imgs/weired-guy.png";
 const HomePage = ({setTodoPage}) => {
 
   const renderTodoPage = () =>{
-    setTodoPage(40)
+    setTodoPage(100)
   }
   return (
     <div className="homePage">

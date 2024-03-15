@@ -37,7 +37,7 @@ const ToDoContainer = () => {
 
   return (
     <>
-      <div className="todoHomeContainer" style={{ width : `${todoPage}vw`}}>
+      <div className="todoHomeContainer" style={{ width : `${todoPage}%`}}>
         <span className="material-icons backArrow" onClick={()=> setTodoPage(0)}>arrow_back</span>
         <div className="todoContainer">
           <div className="top">

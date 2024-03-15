@@ -266,3 +266,45 @@ body {
 .completed{
   text-decoration: line-through;
 }
+
+
+
+@media (max-width:600px) {
+  .wrapper {
+    width: 95vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px 2px $BoxShadow-color;
+    position: relative;
+    background-color: $primary-color;
+  }
+  .homePage {
+    width: 95vw;
+    height: 80vh;
+    background-color: #2e6d74;
+    border-radius: 5px;
+}
+.homePage img {
+  width: 227px;
+  left: 67px;
+  top: 121px;
+}
+.homePage .rightHomeTexts {
+  right: 60px;
+  gap: 424px;
+  
+}
+.wrapper .todoHomeContainer .todoContainer {
+  border-radius: 5px;
+  width: 95vw;
+  height: 98%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+}
