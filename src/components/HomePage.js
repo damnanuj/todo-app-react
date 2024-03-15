@@ -8,7 +8,7 @@ const HomePage = ({setTodoPage}) => {
   }
   return (
     <div className="homePage">
-      <img className="guyImg" src={weiredGuy} />
+      <img className="guyImg" src={weiredGuy} alt="banner" />
       <div className="rightHomeTexts">
             <div className="nothingText">
                 <span>Seems like</span>
