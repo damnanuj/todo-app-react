@@ -112,13 +112,14 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 40px;
 
         // border: 1px solid red;
 
         input {
           background-color: $white-smoke;
           width: 80%;
-          height: 40px;
+          height: 100%;
           border: none;
           outline: none;
           padding: 20px 20px;
@@ -128,7 +129,7 @@ body {
 
         button {
           width: 25%;
-          height: 40px;
+          height: 100%;
           border: none;
           outline: none;
 
@@ -312,5 +313,32 @@ body {
 //Tablet responsive
 
 @media (min-width:601px) and (max-width:1024px){
+  .wrapper {
+    width: 95vw;
+    height: 85vh;
+}
+.wrapper .todoHomeContainer .todoContainer {
+  width: 100%;
+  padding: 30px;
+ 
+}
+.wrapper .todoHomeContainer .todoContainer .heading {
+  margin-bottom: 25px;
+  font-size: 40px;
+}
+.wrapper .todoHomeContainer .todoContainer .todo {
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.wrapper .todoHomeContainer .todoContainer .inputContainer {
+  height: 70px;
+  
+}
+.inputContainer input{
+  font-size: 30px;
+}
+.inputContainer button {
+  font-size: 30px;
+}
 
 }

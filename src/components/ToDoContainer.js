@@ -22,7 +22,7 @@ const ToDoContainer = () => {
   const [todoPage, setTodoPage] = useState(0)
 
   const deleteTask = (id) =>{
-    const newTask = todos.filter(item =>item.id != id)
+    const newTask = todos.filter(item =>item.id !== id)
     setTodos(newTask)
   }
   const taskCompleted =(id)=>{
