@@ -268,7 +268,7 @@ body {
 }
 
 
-
+// MObile responsive
 @media (max-width:600px) {
   .wrapper {
     width: 95vw;
@@ -307,4 +307,10 @@ body {
   align-items: center;
 }
 
+}
+
+//Tablet responsive
+
+@media (min-width:601px)and(max-width:1024px){
+  
 }

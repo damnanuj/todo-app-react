@@ -5,8 +5,9 @@
 
 
 import "../src/components/todo.scss"
-import HomePage from "./components/HomePage";
-import ToDoContainer from './components/ToDoContainer';
+import ToDoContainer from "./components/TodoContainer";
+
+
 // import Container from "./components/random/Container";
 // import "../src/components/random/container.scss"
 
