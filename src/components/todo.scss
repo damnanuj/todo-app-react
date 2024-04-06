@@ -211,7 +211,6 @@ body {
       // border: 1px solid $AddButton-color;
       display: flex;
       flex-direction: column;
-      gap: 2px;
 
       span {
         background-color: #dfdfdf;
@@ -221,6 +220,7 @@ body {
         font-family: "Caveat", cursive;
         font-weight: 700;
         font-size: 25px;
+        box-shadow: 2px 2px 5px #000000b8;
       }
 
       span:last-child {
@@ -234,6 +234,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 10px;
 
       p {
         color: #dfdfdf;
@@ -339,6 +340,35 @@ body {
 }
 .inputContainer button {
   font-size: 30px;
+}
+.homePage {
+  width: 95vw;
+  height: 85vh;
+  background-color: #2e6d74;
+  border-radius: 5px;
+}
+.homePage img {
+  width: 350px;
+  position: absolute;
+  left: 30px;
+  top: 3%;
+}
+.homePage .rightHomeTexts .nothingText span {
+  
+  font-size: 35px;
+}
+.homePage .rightHomeTexts .letsAdd p {
+  font-size: 45px;
+}
+.homePage .rightHomeTexts .letsAdd {
+  gap: 15px;
+}
+.homePage .rightHomeTexts .letsAdd span {
+ 
+  padding: 18px 55px;
+ 
+  font-size: 40px;
+  
 }
 
 }
