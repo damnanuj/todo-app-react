@@ -34,6 +34,9 @@ const ToDoContainer = () => {
     }
     setTodos([...todos])
   }
+  const editTask = (id) =>{
+    console.log(id);
+  }
 
   return (
     <>
@@ -49,7 +52,7 @@ const ToDoContainer = () => {
             <p className="noItems">No items, please add something.</p>
           ) : (
             <div className="todosHolder">
-                <ToDo tasks={todos} deleteTask={deleteTask} taskCompleted={taskCompleted}/> 
+                <ToDo tasks={todos} deleteTask={deleteTask} taskCompleted={taskCompleted} editTask={editTask}/> 
             </div>
           )}
         </div>
