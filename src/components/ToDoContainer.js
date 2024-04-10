@@ -15,7 +15,6 @@ const ToDoContainer = () => {
     //  {id: 1, task: 'Task2'}
     // ]
   };
-
   useEffect(() => {
     console.log(todos); // Logging the current todos
   }, [todos]); // Log todos whenever it changes 
